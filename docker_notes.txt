@@ -1628,6 +1628,78 @@ Take one of your existing AI/ML projects and containerize it. Upload the followi
 
 This will demonstrate your practical understanding of Docker.
 
+Docker_Installation_and_Commands.txt
+
+
+DOCKER INSTALLATION & COMMANDS — QUICK REFERENCE
+python:3.12
+
+-   pull → Downloads an image.
+-   images → Lists available images.
+-   rmi → Removes an image.
+
+CONTAINER COMMANDS
+
+docker run hello-world docker ps docker ps -a docker run -it ubuntu bash
+docker start docker stop docker restart docker rm
+
+-   run → Creates and starts a container.
+-   ps → Shows running containers.
+-   -a → Shows all containers, including stopped ones.
+-   -it → Opens an interactive terminal.
+-   start → Starts an existing stopped container.
+-   stop → Stops a running container.
+-   rm → Removes a container.
+
+BUILD COMMANDS
+
+docker build -t my-app . docker run my-app docker run -d -p 8000:8000
+my-app
+
+-   build → Creates an image using a Dockerfile.
+-   -t → Assigns a name/tag to the image.
+-   . → Uses the current directory as the build context.
+-   -d → Runs the container in the background.
+-   -p → Maps host port to container port.
+
+DEBUGGING COMMANDS
+
+docker logs docker exec -it bash docker inspect docker stats docker
+system df
+
+-   logs → Displays application logs.
+-   exec → Executes commands inside a running container.
+-   inspect → Displays detailed container information.
+-   stats → Shows CPU and memory usage.
+-   system df → Shows Docker disk usage.
+
+DOCKER COMPOSE COMMANDS
+
+docker compose up docker compose up -d docker compose down docker
+compose ps docker compose logs
+
+-   up → Starts services defined in Compose.
+-   up -d → Starts services in the background.
+-   down → Stops and removes Compose containers and networks.
+-   ps → Lists Compose services.
+-   logs → Displays service logs.
+
+IMPORTANT COMMAND DIFFERENCES
+
+docker run → Creates a NEW container and starts it. docker start →
+Starts an EXISTING stopped container.
+
+docker stop → Stops a container. docker rm → Removes a container.
+
+docker rmi → Removes an image. docker pull → Downloads an image. docker
+build → Builds an image from a Dockerfile.
+
+REMEMBER
+
+docker run = Create + Start docker build = Build Image docker exec =
+Enter Running Container
+
+
 ---
 
 # Official Learning Resources
